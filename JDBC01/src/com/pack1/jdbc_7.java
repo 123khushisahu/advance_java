@@ -18,7 +18,7 @@ public class jdbc_7 {
 		
 		try {
 			RowSetFactory rsf=RowSetProvider.newFactory();
-			JdbcRowSet jrs=rsf.createCachedRowSet();
+			JdbcRowSet jrs = rsf.createJdbcRowSet();
 			jrs.setUrl(db_url);
 			jrs.setUsername(db_uname);
 			jrs.setPassword(db_pwd);
@@ -29,11 +29,11 @@ public class jdbc_7 {
 			
 			while(jrs.next())
 				System.out.println(jrs.getString(1)+" "+jrs.getString(2)+" "+jrs.getString(4));
-			System.out.println(=====================);
+			System.out.println("=====================");
 			
 			jrs.absolute(-2);
 			System.out.println(jrs.getString(1)+" "+jrs.getString(2)+" "+jrs.getString(4));
-			System.out.println(=====================);
+			System.out.println("=====================");
 			jrs.afterLast();
 			while(jrs.previous())
 				System.out.println(jrs.getString(1)+" "+jrs.getString(2)+" "+jrs.getString(4));
@@ -80,7 +80,6 @@ public class jdbc_7 {
 		//obj.meth1();
 		obj.meth2();
 		
-		// TODO Auto-generated method stub
 
 	}
 
