@@ -5,7 +5,10 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
+<<<<<<< HEAD
 import java.sql.Types;
+=======
+>>>>>>> bf8a41d2708c30ceb9feced3627cedae5f2a8bf8
 import java.util.Scanner;
 
 public class jdbc_pro8 {
@@ -71,6 +74,7 @@ public class jdbc_pro8 {
 	
 	void meth2()
 	{
+<<<<<<< HEAD
 		System.out.println("implementing callable statement===>procedure2");
 		Connection con=connect();
 		try {
@@ -93,6 +97,13 @@ public class jdbc_pro8 {
 			System.out.println("EMPLOYEE BASIC SALARY:"+cstmt.getInt(4));
 			System.out.println("EMPLOYEE TOTAL SALARY:"+cstmt.getFloat(5));
 			
+=======
+		System.out.println("i want to execute query");
+		Connection con=connect();
+		try {
+			Statement stmt = con.createStatement();
+			ResultSet rs = stmt.executeQuery("SELECT * FROM emp");			
+>>>>>>> bf8a41d2708c30ceb9feced3627cedae5f2a8bf8
 		}catch(Exception e)
 		{
 			e.printStackTrace();
