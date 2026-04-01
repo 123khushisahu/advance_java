@@ -5,10 +5,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
-<<<<<<< HEAD
 import java.sql.Types;
-=======
->>>>>>> bf8a41d2708c30ceb9feced3627cedae5f2a8bf8
 import java.util.Scanner;
 
 public class jdbc_pro8 {
@@ -74,7 +71,6 @@ public class jdbc_pro8 {
 	
 	void meth2()
 	{
-<<<<<<< HEAD
 		System.out.println("implementing callable statement===>procedure2");
 		Connection con=connect();
 		try {
@@ -97,24 +93,41 @@ public class jdbc_pro8 {
 			System.out.println("EMPLOYEE BASIC SALARY:"+cstmt.getInt(4));
 			System.out.println("EMPLOYEE TOTAL SALARY:"+cstmt.getFloat(5));
 			
-=======
-		System.out.println("i want to execute query");
-		Connection con=connect();
-		try {
-			Statement stmt = con.createStatement();
-			ResultSet rs = stmt.executeQuery("SELECT * FROM emp");			
->>>>>>> bf8a41d2708c30ceb9feced3627cedae5f2a8bf8
 		}catch(Exception e)
 		{
 			e.printStackTrace();
 		}
 		return;
 	}
+	
+	void meth3()
+	{
+		System.out.println("IMPLEMENTING CALLABLE STATEMENT===>FUNCTION");
+		Connection con=connect();
+		try
+		{
+			CallableStatement cstmt=con.prepareCall("{call ?:=RetriveTsal(?)}");
+			System.out.println("enter employee id:");
+			String e_id=sc.nextLine();
+			cstmt.setString(2,e_id);
+			cstmt.registerOutParameter(1, Types.FLOAT);
+			cstmt.execute();
+			
+			System.out.println("************EMP DATA************");
+			System.out.println("employee id:"+e_id);
+			System.out.println("employe total salary"+cstmt.getFloat(1));
+			
+		}catch (Exception e) {
+			e.printStackTrace();
+			// TODO: handle exception
+		}
+	}
 
 	public static void main(String[] args) {
 		jdbc_pro8 obj=new jdbc_pro8();
 		obj.meth1();
 		obj.meth2();
+		obj.meth3();
 	}
 
 }
