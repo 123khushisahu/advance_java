@@ -142,6 +142,7 @@ public class Jdbc_pro15{
                     System.exit(0);
                 default:
                     System.out.println("Invalid choice");
+                    System.out.println("HEY");
             }
         }
     }
