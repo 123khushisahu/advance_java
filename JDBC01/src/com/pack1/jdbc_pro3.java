@@ -41,7 +41,7 @@ public class jdbc_pro3 {
             String emp_lname = sc.nextLine();
 
             System.out.println("ENTER SALARY:");
-            String emp_sal = sc.nextLine();
+            int emp_sal = Integer.parseInt(sc.nextLine());
 
             System.out.println("ENTER ADDRESS:");
             String emp_addr = sc.nextLine();

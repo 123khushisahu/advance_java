@@ -21,9 +21,6 @@ public class jdbc_pro1
 			Connection con=DriverManager.getConnection(db_url,db_uname,db_pwd);
 			System.out.println("connection created");
 			con.close();
-			
-			
-			
 		}
 		catch(Exception e)
 		{

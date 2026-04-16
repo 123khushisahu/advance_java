@@ -12,7 +12,7 @@ public class CLASSA {
 	}
 
 	public static void main(String[] args) {
-		new CLASSA.meth1();
+		new CLASSA().meth1();
 
 	}
 

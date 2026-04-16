@@ -17,9 +17,10 @@ public class employee extends GenericServlet {
 		res.setContentType("text/html");
 		String e_name=req.getParameter("ename");
 		String e_id=req.getParameter("eid");
-		String e_sal=req.getParameter("esal");
-		String e_exp=req.getParameter("eexp");
-		
+		double e_sal=Integet.parseInt(req.getParameter("esal");)
+//		String e_sal=req.getParameter("esal");
+//		String e_exp=req.getParameter("eexp");
+//		
 		double sal=Double.parseDouble(e_sal);
 		int exp=Integer.parseInt(e_exp);
 		if(exp>=5) {

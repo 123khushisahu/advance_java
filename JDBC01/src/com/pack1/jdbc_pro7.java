@@ -5,7 +5,7 @@ import javax.sql.rowset.JdbcRowSet;
 import javax.sql.rowset.RowSetFactory;
 import javax.sql.rowset.RowSetProvider;
 
-public class jdbc_7 {
+public class jdbc_pro7 {
 	
 	private String driver = "oracle.jdbc.OracleDriver";
 	private String db_url = "jdbc:oracle:thin:@localhost:1521:orcl";
