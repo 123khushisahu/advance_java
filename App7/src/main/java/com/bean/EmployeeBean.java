@@ -1,14 +1,15 @@
-package com.bean;
+package com.bean;   //its package use for data reusability purpose
 
 import java.io.Serializable;
 
-public class EmployeeBean implements Serializable {
+public class EmployeeBean implements Serializable {//1st
+	//2nd
 	private String emp_id;
 	private String emp_fname;
 	private String emp_lname;
 	private int emp_sal;
 	private String emp_addr;
-	
+	//3rd
 	public String getEmp_id() {
 		return emp_id;
 	}
@@ -39,6 +40,7 @@ public class EmployeeBean implements Serializable {
 	public void setEmp_addr(String emp_addr) {
 		this.emp_addr = emp_addr;
 	}
+	//4th
 	public EmployeeBean() {
 		
 	}

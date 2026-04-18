@@ -1,3 +1,4 @@
+
 package com.servlet;
 
 import java.io.IOException;
@@ -25,11 +26,12 @@ public class AddEmpServlet extends HttpServlet{
 		ebean.setEmp_addr(req.getParameter("addr"));
 		AddEmpDAO dao_Obj=new AddEmpDAO();
 		int rowCount=dao_Obj.insertEmpData(ebean);
-		if(rowCount==0)
-			System.out.println("Employee data is not inserted!!!!!");
-		else
-			System.out.println("Employee data inserted successfully!!!!");
-		
+		if(rowCount>0) {
+			req.setAttribute("msg","employee data inserted!!!");
+					req.getRequestDispatcher("AddEmployee.jsp").forward(req, res);
+					
+		}else
+			throw new RuntimeException("employee data inserted fail!!!");
 	}
 
 }
