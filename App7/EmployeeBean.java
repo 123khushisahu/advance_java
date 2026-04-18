@@ -1,0 +1,50 @@
+package com.bean;   //its package use for data reusability purpose
+
+import java.io.Serializable;
+
+public class EmployeeBean implements Serializable {//1st
+	//2nd
+	private String emp_id;
+	private String emp_fname;
+	private String emp_lname;
+	private int emp_sal;
+	private String emp_addr;
+	//3rd
+	public String getEmp_id() {
+		return emp_id;
+	}
+	public void setEmp_id(String emp_id) {
+		this.emp_id = emp_id;
+	}
+	public String getEmp_fname() {
+		return emp_fname;
+	}
+	public void setEmp_fname(String emp_fname) {
+		this.emp_fname = emp_fname;
+	}
+	public String getEmp_lname() {
+		return emp_lname;
+	}
+	public void setEmp_lname(String emp_lname) {
+		this.emp_lname = emp_lname;
+	}
+	public int getEmp_sal() {
+		return emp_sal;
+	}
+	public void setEmp_sal(int emp_sal) {
+		this.emp_sal = emp_sal;
+	}
+	public String getEmp_addr() {
+		return emp_addr;
+	}
+	public void setEmp_addr(String emp_addr) {
+		this.emp_addr = emp_addr;
+	}
+	//4th
+	public EmployeeBean() {
+		
+	}
+		
+	
+
+}

@@ -1,5 +1,5 @@
 
-package com.servlet;
+package com.servlet;   //this package use for data setting in html page purpose
 
 import java.io.IOException;
 
@@ -28,6 +28,7 @@ public class AddEmpServlet extends HttpServlet{
 		int rowCount=dao_Obj.insertEmpData(ebean);
 		if(rowCount>0) {
 			req.setAttribute("msg","employee data inserted!!!");
+			
 					req.getRequestDispatcher("AddEmployee.jsp").forward(req, res);
 					
 		}else

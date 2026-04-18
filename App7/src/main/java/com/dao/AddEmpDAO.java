@@ -1,8 +1,9 @@
 
 
-package com.dao;
+package com.dao;      //this package use for Connection/data  setting purpose in database
 
 import java.sql.Connection;
+
 import java.sql.PreparedStatement;
 
 import com.bean.EmployeeBean;
