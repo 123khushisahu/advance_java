@@ -26,6 +26,6 @@ public class EvenServlet extends GenericServlet {
 		pw.println("</h></center>");
 		req.getRequestDispatcher("index.html").include(req,res);
 
+		}
 	}
-	}
-	}
+}

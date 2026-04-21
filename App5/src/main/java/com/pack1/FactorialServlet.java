@@ -23,7 +23,8 @@ public class FactorialServlet extends GenericServlet{
 	pw.println("<h><center>");
 	pw.println("the factorial is" +fact);
 	pw.println("</h></center>");
-	//req.getRequestDispatcher("index.html").include(req,res);
+	//req.getRequestDispatcher("index.html").include(req,res);     //without use i can work  of directly in browser if 
+	//i use this  then need of refresh that then after  i can use of button
 	
 	}
 
