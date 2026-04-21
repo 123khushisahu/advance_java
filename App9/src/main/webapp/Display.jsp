@@ -6,7 +6,8 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 </head>
-<body><h1>
+<body>
+0<h1>
 <center>
 <%
 String pro_name=request.getParameter("pname");
