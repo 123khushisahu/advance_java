@@ -1,6 +1,7 @@
 package com.bean;
-
 import java.io.Serializable;
+
+import javax.servlet.annotation.WebServlet;
 
 public class UserBean implements Serializable {
 	private String u_name,u_pwd,u_fname,u_lname,u_mailid,u_phn;
@@ -54,6 +55,17 @@ public class UserBean implements Serializable {
 	}
 	public UserBean(){
 		
-	};
+	}
+		
+	
+	
+		
+	
 
 }
+
+
+
+
+
+

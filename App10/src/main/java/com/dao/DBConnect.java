@@ -14,8 +14,7 @@ public class DBConnect {
 	}catch (Exception e) {
 		e.printStackTrace();
 	}
-		// TODO: handle exception
-	}
+}
 	public static Connection getcon()
 	{
 		return con;
