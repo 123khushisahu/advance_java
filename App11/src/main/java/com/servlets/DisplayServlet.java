@@ -5,7 +5,7 @@ import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.*;
 
-@WebServlet("/dis")
+@WebServlet("/saveForm")
 public class DisplayServlet extends HttpServlet {
 
     @Override

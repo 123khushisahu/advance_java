@@ -23,8 +23,8 @@ String Courses=request.getParameter("crs");
 String Hobbies[]=request.getParameterValues("hb");
 
 
-out.println("Name :- " +name+"<br><br>");
-out.println("Age :- "+ age+"<br><br>");
+out.println("Name :- "+name+"<br><br>");
+out.println("Age :- "+age+"<br><br>");
 out.println("Gender :- "+gender+"<br><br>");
 out.println("Address :- "+addr+"<br><br>");
 out.println("MaritalStatus :- "+MaritalStatus+"<br><br>");

@@ -2,47 +2,55 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Student Form</title>
 </head>
-<body><center><h1>
-<form action="dis" method="post">
-<table>
+<body>
+
+<center>
+<h1>Registration Form</h1>
+
+<form action="saveForm" method="post">
+<table border="1">
+
 <tr>
 <td>Name</td>
-<td> <input type="text" name="tname" value=""></td>
+<td><input type="text" name="tname" required></td>
 </tr>
 
 <tr>
 <td>Age</td>
-<td><input type="text" name="tage" value="" ></td>
+<td><input type="number" name="tage" required></td>
 </tr>
 
 <tr>
-<td> Gender</td>
-<td><input type="radio" name="gen" value="M" checked="checked"/>Male
-<input type="radio" name="gen" value="F" />Female
+<td>Gender</td>
+<td>
+<input type="radio" name="gen" value="M" checked> Male
+<input type="radio" name="gen" value="F"> Female
 </td>
 </tr>
 
 <tr>
 <td>Address</td>
 <td>
-<textarea name="taddress" rows="4" cols="20">Enter Address</textarea>
+<textarea name="taddress" rows="4" cols="20" placeholder="Enter Address"></textarea>
 </td>
 </tr>
 
 <tr>
-<td>Marital status</td>
-<td><input type="checkbox" name="ms" value="married"/>Married
-<input type="checkbox" name="ms" value="single"/>Un-Married
-</td>
-</tr>
-
-<tr>
-<td> Qualification</td>
+<td>Marital Status</td>
 <td>
-<select name="qlfy">
-<option value="B.Tech">Engg</option>
+<input type="radio" name="ms" value="married"> Married
+<input type="radio" name="ms" value="single"> Unmarried
+</td>
+</tr>
+
+<tr>
+<td>Qualification</td>
+<td>
+<select name="qualification">
+<option value="">--Select--</option>
+<option value="B.Tech">Engineering</option>
 <option value="MBBS">Medical</option>
 <option value="B.A">Arts</option>
 </select>
@@ -52,10 +60,10 @@
 <tr>
 <td>Courses</td>
 <td>
-<select name="crs" size="3" multiple="multiple">
+<select name="crs" size="3" multiple>
 <option value="JAVA">JAVA</option>
 <option value=".NET">.NET</option>
-<option value="TESTING">"TESTING"</option>
+<option value="TESTING">TESTING</option>
 </select>
 </td>
 </tr>
@@ -63,21 +71,23 @@
 <tr>
 <td>Hobbies</td>
 <td>
-<input type="checkbox" name="hb" value="read" checked/>Reading
-<input type="checkbox" name="hb" value="sports" />Online Gaming
-<input type="checkbox" name="hb" value="travel" />Travelling
+<input type="checkbox" name="hb" value="reading"> Reading
+<input type="checkbox" name="hb" value="gaming"> Online Gaming
+<input type="checkbox" name="hb" value="travel"> Travelling
 </td>
 </tr>
 
 <tr>
-<td colspan="2">
-<input type="submit" value="submit">
-<input type="reset" value="cancel">
+<td colspan="2" align="center">
+<input type="submit" value="Submit">
+<input type="reset" value="Cancel">
 </td>
 </tr>
+
 </table>
 </form>
-</h1>
+
+</center>
 
 </body>
 </html>
