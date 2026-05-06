@@ -216,7 +216,7 @@ out.println("<span class='data'>"+data+"</span><br><br>");
 
 <a href="view1">📦 View Product</a>
 
-<a href="LogOut">🚪 Logout</a>
+<a href="Logout">🚪 Logout</a>
 
 </h1>
 

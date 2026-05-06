@@ -15,7 +15,7 @@ public class DisplayServlet extends HttpServlet{
 		ServletConfig config =this.getServletConfig();
 		context.setAttribute("msg1", "This is from ServletContext===>Servlet");
 		req.setAttribute("ServletName", config.getServletName());
-		req.setAttribute("ServletName", config.getInitParameter("msg3"));
+		req.setAttribute("msg3", config.getInitParameter("msg3"));
 		req.getRequestDispatcher("Display.jsp").forward(req, resp);
 	}
 

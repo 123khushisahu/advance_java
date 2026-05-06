@@ -11,7 +11,7 @@
 <h1>
 <%
 session.invalidate();
-out.println("Admin logout successfully!!!<br><br>");
+out.println("logout successfully!!!<br><br>");
 %>
 <jsp:include page="index.html"/>
 </h1>
