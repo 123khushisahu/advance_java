@@ -12,11 +12,8 @@
   <init-param>
   <param-name>msg</param-name>
   <param-value>java is awesome</param-value>
-  
   </init-param>
-  
   </filter>
-  
   <filter-mapping>
   <filter-name>DisplayFilter</filter-name>
   <url-pattern>/dis</url-pattern>
