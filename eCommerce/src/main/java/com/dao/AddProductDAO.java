@@ -7,7 +7,7 @@ package com.dao;
 	import com.bean.ProductBean;//PCODE,PNAME,PCOMPANY,PRICE,PQTY;
 
 	public class AddProductDAO {
-		public int insertproduct(ProductBean pb)
+		public int insertproduct(ProductBean pb) throws Exception
 		{
 			int rowCount=0;
 			try {
@@ -21,7 +21,7 @@ package com.dao;
 				pstmt.setString(5, pb.getPQTY());
 				rowCount=pstmt.executeUpdate();
 				}catch (Exception e) {
-					e.printStackTrace();		
+					throw e;
 				}
 				return rowCount;
 			}

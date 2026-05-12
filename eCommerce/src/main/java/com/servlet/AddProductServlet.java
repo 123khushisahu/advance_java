@@ -16,30 +16,37 @@ public class AddProductServlet extends HttpServlet {
 	@Override
 	protected void doPost(HttpServletRequest req,HttpServletResponse res) throws ServletException,IOException
 	{
-		HttpSession session=req.getSession(false);
-		if(session==null)
-		{
-			throw new RuntimeException("User session is expired!!!");
-		}else
-		{
-			ProductBean pb=new ProductBean();
-			pb.setPCODE(req.getParameter("pcode"));
-			pb.setPNAME(req.getParameter("pname"));
-			pb.setPCOMPANY(req.getParameter("pcpny"));
-			pb.setPRICE(req.getParameter("pprice"));
-			pb.setPQTY(req.getParameter("pqty"));
-			
-			int rowCount=new AddProductDAO().insertproduct(pb);
-			if(rowCount==0)
-				throw new RuntimeException("Product Data Insertion Failed!!!!");
-			else
+		try {
+			HttpSession session=req.getSession(false);
+			if(session==null)
 			{
-				req.setAttribute("msg","Product Data Inserted");
-				req.getRequestDispatcher("AddProduct.jsp").forward(req, res);
+				throw new RuntimeException("User session is expired!!!");
+			}else
+			{
+				ProductBean pb=new ProductBean();
+				pb.setPCODE(req.getParameter("pcode"));
+				pb.setPNAME(req.getParameter("pname"));
+				pb.setPCOMPANY(req.getParameter("pcpny"));
+				pb.setPRICE(req.getParameter("pprice"));
+				pb.setPQTY(req.getParameter("pqty"));
+				
+				int rowCount=new AddProductDAO().insertproduct(pb);
+				if(rowCount>0)
+				
+				{
+					req.setAttribute("msg","Product Data Inserted");
+					req.getRequestDispatcher("AddProduct.jsp").forward(req, res);
+				}
 			}
 		}
-	}
+			catch (Exception e) {
+				req.setAttribute("msg", "duplicate not allow");
+				req.getRequestDispatcher("Error.jsp").forward(req, res);
+			}
+		
+	
 	
 	
 
-}
+	}
+	}
