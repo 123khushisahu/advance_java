@@ -1,16 +1,13 @@
-package com.bean;
+package com.Bean;
 
 import java.io.Serializable;
 
-public class Student implements Serializable{
-
-
+public class StudentBean implements Serializable{
 	private int id;
-	private String name;
-	private String email;
-	private String course;
-	
-	
+    private String name;
+    private String email;
+    private String course;
+    
 	public int getId() {
 		return id;
 	}
@@ -35,7 +32,8 @@ public class Student implements Serializable{
 	public void setCourse(String course) {
 		this.course = course;
 	}
+    
+    public StudentBean() {
 
-	
-
+}
 }
