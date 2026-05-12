@@ -49,11 +49,11 @@ public class UpdateStudentServlet extends HttpServlet {
         StudentDAO dao =
                 new StudentDAO();
 
-        // Call Update Method
+     
 
         dao.updateStudent(s);
 
-        // Redirect
+     
 
         res.sendRedirect("view");
     }
