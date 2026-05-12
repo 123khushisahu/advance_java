@@ -10,6 +10,8 @@
 <center><h1>
 <% 
 String s=request.getParameter("choice");
+
+String sub=request.getParameter("choicesub");
 if("Add".equals(s))
 {
 
