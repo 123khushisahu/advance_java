@@ -18,7 +18,7 @@ String age=request.getParameter("tage");
 String gender=request.getParameter("gen");
 String addr=request.getParameter("taddress");
 String MaritalStatus=request.getParameter("ms");
-String Qualification=request.getParameter("qlfy");
+String Qualification=request.getParameter("qlf");
 String Courses=request.getParameter("crs");
 String Hobbies[]=request.getParameterValues("hb");
 
