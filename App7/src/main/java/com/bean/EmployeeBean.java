@@ -1,7 +1,12 @@
 package com.bean;   //its package use for data reusability purpose
 
 import java.io.Serializable;
+//
+//C:\Users\admin>ipconfig
 
+//:5f00%3
+//IPv4 Address. . . . . . . . . . . : 10.163.240.58
+//Subnet Mask .
 public class EmployeeBean implements Serializable {//1st
 	//2nd
 	private String emp_id;
