@@ -8,6 +8,7 @@
 <meta charset="UTF-8">
 <title>Student List</title>
 
+
 <style>
 
 *{
@@ -29,7 +30,7 @@ body{
 	background:white;
 	padding:30px;
 	border-radius:15px;
-	box-shadow:0px 0px 20px rgba(0,0,0,0.3);
+	box-shadow:10px 10px 20px red;
 }
 
 h2{
@@ -40,24 +41,28 @@ h2{
 
 table{
 	width:100%;
-	border-collapse:collapse;
+	border-collapse:separate;
 }
 
 table th{
 	background:#5b86e5;
-	color:white;
+	color:black;
 	padding:14px;
-	font-size:16px;
+	font-size:17px;
 }
 
 table td{
 	padding:12px;
 	text-align:center;
-	border-bottom:1px solid #ddd;
+border-bottom:2px solid green;
+	border-top:3px solid black;
+	border-left:2px solid orange;
+	border-right:3px solid blue;
+	
 }
 
 table tr:hover{
-	background:#f2f2f2;
+	background:yellow;
 }
 
 .edit-btn{
@@ -71,12 +76,12 @@ table tr:hover{
 }
 
 .edit-btn:hover{
-	background:#218838;
+	background:red;
 }
 
 .delete-btn{
 	text-decoration:none;
-	background:#dc3545;
+	background:black;
 	color:white;
 	padding:8px 14px;
 	border-radius:6px;
@@ -85,7 +90,7 @@ table tr:hover{
 }
 
 .delete-btn:hover{
-	background:#c82333;
+	background:aqua;
 }
 
 .add-btn{
@@ -114,10 +119,11 @@ table tr:hover{
 
 <body>
 
+
+
 <div class="container">
 
-<h2>Student List</h2>
-
+<h2><u>Student List</u></h2>
 <table>
 
 <tr>
@@ -147,7 +153,8 @@ for(StudentBean s : list){
 
 <td>
 <a class="edit-btn"
-href="edit?id=<%=s.getId()%>">
+href="edit?id=<%=s.getId()%>"
+onclick="return confirm('Are you sure! you want to change?')">
 Edit
 </a>
 </td>
@@ -169,10 +176,14 @@ Delete
 </table>
 
 <div class="button-area">
-<a class="add-btn" href="AddStudent.jsp">
-+ Add New Student
+<a class="add-btn" href="index.html"
+onclick="return confirm('Are you sure!')">
+ Add New Student
 </a>
 </div>
+
+
+
 
 </div>
 

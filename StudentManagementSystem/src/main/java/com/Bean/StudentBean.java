@@ -1,12 +1,16 @@
 package com.Bean;
 
-import java.io.Serializable;
-
-public class StudentBean implements Serializable{
+public class StudentBean{
+	
 	private int id;
     private String name;
     private String email;
     private String course;
+    
+    
+    
+    
+    
     
 	public int getId() {
 		return id;
@@ -33,7 +37,5 @@ public class StudentBean implements Serializable{
 		this.course = course;
 	}
     
-    public StudentBean() {
-
-}
+ 
 }

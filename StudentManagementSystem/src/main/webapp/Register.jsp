@@ -112,10 +112,7 @@ input[type="submit"]:hover{
 
 <form action="add" method="post">
 
-<div class="input-box">
-<label>Student Id</label>
-<input type="text" name="sid" placeholder="Enter Student Id">
-</div>
+
 
 <div class="input-box">
 <label>Student Name</label>

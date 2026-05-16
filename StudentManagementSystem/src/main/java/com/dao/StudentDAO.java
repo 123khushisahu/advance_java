@@ -90,7 +90,6 @@ public class StudentDAO {
 		    StudentBean s = new StudentBean();
 
 		    try {
-
 		        String sql =
 		                "select * from student90 where id=?";
 
