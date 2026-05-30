@@ -1,6 +1,6 @@
 package com.Bean;
 
-public class employeePojo {
+public class EmployeePojo {//plain old java object(pojo)
 	
 	/*Types of Access Modifiers in Java
 
@@ -26,7 +26,7 @@ public class employeePojo {
 	//In Java, Camel Case is a naming style where words are joined 
 	//together without spaces, and some 
 	//letters are capital.
-	
+	private int id;
 	private int emp_id;
 	private String empName;
 	private String address;
@@ -34,7 +34,7 @@ public class employeePojo {
 	private long mobNo;
 	private String empDept;
 	
-	
+	//getter & setter
 	
 	public int getEmp_id() {
 		return emp_id;
@@ -72,4 +72,24 @@ public class employeePojo {
 	public void setEmpDept(String empDept) {
 		this.empDept = empDept;
 	}
-}
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	
+	
+	
+		
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
