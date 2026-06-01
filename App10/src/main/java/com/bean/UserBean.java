@@ -4,6 +4,8 @@ import java.io.Serializable;
 import javax.servlet.annotation.WebServlet;
 
 public class UserBean implements Serializable {
+	
+	//this is my comment
 	private String u_name,u_pwd,u_fname,u_lname,u_mailid,u_phn;
 
 	public String getU_name() {

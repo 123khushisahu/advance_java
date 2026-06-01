@@ -2,6 +2,8 @@ package com.Bean;
 
 public class EmployeePojo {//plain old java object(pojo)
 	
+	//hi this is crud app
+	
 	/*Types of Access Modifiers in Java
 
 	There are 4 access modifiers:
