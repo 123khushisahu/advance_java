@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.Bean.EmployeePojo;
 import com.DAO.EmployeeDAO;
 
 //Edit Update data methods 
@@ -25,23 +26,19 @@ public class EditUpdateEmployeeClass extends HttpServlet {
 	        EmployeeDAO dao =new EmployeeDAO();
 	                
 
-	       // EmployeePojo emp =dao.getEmployeeDataById(id);
+	        EmployeePojo emp =dao.getEmployeeDataById(id);
 	                
 
-	       // req.setAttribute("employee", emp);
+	        req.setAttribute("employee", emp);
 
 	        req.getRequestDispatcher(
 	                "employeeRegistration.jsp")
 	                .forward(req, res);
 			
 			
-	        req.getRequestDispatcher(
-	                "employee_view_list.jsp")
-	                .forward(req, res);          
-			
+	        
+		
 		}
-		
-		
 	
 
 

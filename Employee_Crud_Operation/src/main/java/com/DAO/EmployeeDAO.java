@@ -87,6 +87,84 @@ public class EmployeeDAO {
 
 	    return list;
 	}
+
+
+
+
+
+	public EmployeePojo getEmployeeDataById(int id) {
+
+	    EmployeePojo emp = null;
+
+	    try {
+	        Connection con = DBConnection.getConnection();
+
+	        String query = "select * from EMPLOYEE_REGISTRAION where id=?";
+
+	        PreparedStatement pstmt = con.prepareStatement(query);
+
+	        pstmt.setInt(1, id);
+
+	        ResultSet rs = pstmt.executeQuery();
+
+	        if (rs.next()) {
+
+	            emp = new EmployeePojo();
+
+	            
+	            emp.setId(rs.getInt("id"));
+	            emp.setEmpName(rs.getString("emp_name"));
+	            emp.setEmp_id(rs.getInt("emp_id"));
+	            emp.setAddress(rs.getString("emp_address"));
+	            emp.setEmail(rs.getString("email"));
+	            emp.setMobNo(rs.getLong("mob_no"));
+	            emp.setEmpDept(rs.getString("emp_dept"));
+
+	        }
+
+	    } catch (Exception e) {
+	        e.printStackTrace();
+	    }
+
+	    return emp;
+	}
+
+
+
+
+
+	
+	
+	/* update methods */
+	public int updateMethod(EmployeePojo emppojo) {
+
+	    int rowCount = 0;
+
+	    try {
+	        Connection con = DBConnection.getConnection();
+
+	        PreparedStatement pstmt = con.prepareStatement(
+	                "UPDATE EMPLOYEE_REGISTRAION "
+	                + "SET emp_id=?, EMP_NAME=?, EMP_ADDRESS=?, EMAIL=?, MOB_NO=?, EMP_DEPT=? "
+	                + "WHERE id=?");
+
+	        pstmt.setInt(1, emppojo.getEmp_id());
+	        pstmt.setString(2, emppojo.getEmpName());
+	        pstmt.setString(3, emppojo.getAddress());
+	        pstmt.setString(4, emppojo.getEmail());
+	        pstmt.setLong(5, emppojo.getMobNo());
+	        pstmt.setString(6, emppojo.getEmpDept());
+	        pstmt.setInt(7, emppojo.getId());
+	       
+
+	        rowCount = pstmt.executeUpdate();
+
+	    } catch (Exception e) {
+	        e.printStackTrace();
+	    }
+
+	    return rowCount;
+	}
 		
 		
 	

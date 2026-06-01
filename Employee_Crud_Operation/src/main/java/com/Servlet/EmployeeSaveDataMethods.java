@@ -61,7 +61,7 @@ public class EmployeeSaveDataMethods extends HttpServlet {
 					
 					EmployeeDAO empdao = new EmployeeDAO();
 
-					//empdao.UpdateData(emppojo);
+					empdao.updateMethod(emppojo);
 
 					//res.sendRedirect("GetdataList");
 					 // Redirect with message
