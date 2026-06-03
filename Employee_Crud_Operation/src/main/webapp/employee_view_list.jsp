@@ -98,11 +98,11 @@ class="table table-bordered w-50">
             </td>
 
             <td>
-                <a class="btn btn-danger"
-                href="deleteEmployee?id=<%=e.getEmp_id()%>">
-                Delete
-                </a>
-            </td>
+    <button class="btn btn-danger"
+            onclick="deleteEmployee(<%=e.getId()%>)">
+        Delete
+    </button>
+</td>
 
         </tr>
 
@@ -114,6 +114,33 @@ class="table table-bordered w-50">
 
 </table>
 
+
+<script>
+
+function deleteEmployee(id) {
+
+    if(confirm("Are you sure?")) {
+
+        fetch('<%=request.getContextPath()%>/deletedata?id=' + id, {
+            method: 'DELETE'
+        })
+        .then(function(response) {
+
+            if(response.ok) {
+                window.location.href =
+                    '<%=request.getContextPath()%>/GetdataList?message=Records Deleted Successfully!';
+            } else {
+                window.location.href =
+                    '<%=request.getContextPath()%>/GetdataList?message=Records Not Deleted!';
+            }
+
+        });
+    }
+}
+
+
+
+</script>
 
 
 </body>

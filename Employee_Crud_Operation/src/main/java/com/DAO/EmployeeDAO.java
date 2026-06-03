@@ -16,7 +16,9 @@ public class EmployeeDAO {
 //		
 //		
 //	}
+	
 //	
+	//CRUD=(create/insert,retrieve/read,update,delete)
 	
 	
 	
@@ -165,14 +167,34 @@ public class EmployeeDAO {
 
 	    return rowCount;
 	}
-		
-		
-	
 
-		
-		
-		
+
+
+
+
+	public int deletedataById(int id) {
+
+	    int rowCount = 0;
+
+	    try {
+	        Connection con = DBConnection.getConnection();
+
+	        PreparedStatement pstmt =
+	                con.prepareStatement(
+	                "DELETE FROM EMPLOYEE_REGISTRAION WHERE ID=?");
+
+	        pstmt.setInt(1, id);
+
+	        rowCount = pstmt.executeUpdate();
+
+	    } catch (Exception e) {
+	        e.printStackTrace();
+	    }
+
+	    return rowCount;
 	}
+	
+}
 	
 	
 	
