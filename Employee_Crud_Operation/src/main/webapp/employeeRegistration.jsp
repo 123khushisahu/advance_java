@@ -91,49 +91,63 @@ h1{
 
 
  <input type="hidden" name="nameId" id="idvalue" value="<%= (emp != null) ? emp.getId() : "" %>"  >
-<br>
+
+<span style="color: red;"> (*) Indicated mandatory fields </span>
+
+<br><br>
 
 	<div class="mb-3">
-		<label class="form-label">Employee Id</label>
-		<input type="number"
+		<label class="form-label">Employee Id</label> <span style="color: red;">*</span>
+		<input type="text"
 name="emp_id"
 value="<%= (emp != null) ? emp.getEmp_id() : "" %>"
-placeholder="Enter Employee Id"
-class="form-control">
+placeholder="Enter employee id in digit" 
+pattern="[0-9]{3,10}"
+    title="Employee ID must be 3 to 10 digits" 
+   class="form-control"
+   required
+   >
 	</div>
 
 	<div class="mb-3">
-		<label class="form-label">Employee Name</label>
+		<label class="form-label">Employee Name </label> <span style="color: red;">*</span>
 		<input type="text" name="empName" value="<%= (emp != null) ? emp.getEmpName() : "" %>"
 		placeholder="Enter Employee Name"
+		maxlength="50"   minlength="2"  required="required"
 		class="form-control">
 	</div>
 
 	<div class="mb-3">
 		<label class="form-label">Employee Address</label>
 		<input type="text" name="address" value="<%= (emp != null) ? emp.getAddress() : "" %>"
-		placeholder="Enter Employee Address"
+		placeholder="Enter Employee Address" maxlength="100" 
 		class="form-control">
 	</div>
 
 	<div class="mb-3">
 		<label class="form-label">Employee Email</label>
-		<input type="email" name="email"   value="<%= (emp != null) ? emp.getEmail() : "" %>"
-		placeholder="Enter Employee Email"
+		<input type="email" name="email"   value="<%= (emp != null) ? emp.getEmail() : "" %>"    
+		placeholder="Enter Employee Email" maxlength="40" 
 		class="form-control">
-	</div>
+<!-- 		 mtlb emp me data hai to jsp bolega emp se give me email -->
+ 	
+ </div>
 
 	<div class="mb-3">
-		<label class="form-label">Employee Mobile No</label>
-		<input type="text" name="mobNo"    value="<%= (emp != null) ? emp.getMobNo() : "" %>"
-		placeholder="Enter Mobile Number"
-		class="form-control">
+		<label class="form-label">Employee Mobile No</label> <span style="color: red;">*</span>
+		<input type="text"
+       name="mobNo" value="<%=(emp !=null) ? emp.getMobNo() : " " %>"            
+       pattern="[7-9][0-9]{9}"
+       maxlength="10"
+       placeholder="Enter Mobile Number in 10 digit only"
+       required
+       class="form-control">
 	</div>
 
 	<div class="mb-4">
 		<label class="form-label">Employee Department</label>
 		<input type="text" name="empDept"  value="<%= (emp != null) ? emp.getEmpDept() : "" %>"
-		placeholder="Enter Department"
+		placeholder="Enter Department" 
 		class="form-control">
 	</div>
 

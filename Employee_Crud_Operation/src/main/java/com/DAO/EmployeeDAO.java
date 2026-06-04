@@ -34,7 +34,7 @@ public class EmployeeDAO {
 	                "INSERT INTO EMPLOYEE_REGISTRAION\r\n"
 	                + "(EMP_NAME, EMP_ID, EMP_ADDRESS, EMAIL, MOB_NO, EMP_DEPT)\r\n"
 	                + "VALUES (?,?,?,?,?,?)");
-
+	
 	        pstmt.setString(1, emppojo.getEmpName());
 	        pstmt.setInt(2, emppojo.getEmp_id());
 	        pstmt.setString(3, emppojo.getAddress());

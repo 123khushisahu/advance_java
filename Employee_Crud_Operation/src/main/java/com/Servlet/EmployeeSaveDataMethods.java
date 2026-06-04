@@ -77,16 +77,18 @@ public class EmployeeSaveDataMethods extends HttpServlet {
 				//jsp p fill kiya  fir jaise hi save button p click kiya uske baad ye us data ko bind karega
 				//yaha pr esliye aaya qki table(database) me abhi id save hi nahi hue hai
 				else {
+					//jsp se data aa raha hai
 					String emp_id = req.getParameter("emp_id") ;
 					String empName = req.getParameter("empName");
 					String address = req.getParameter("address");
 					String email = req.getParameter("email");
 					String mobNo = req.getParameter("mobNo");
 					String empDept = req.getParameter("empDept");
-
+//aa gya 
 					System.out.println("Servlet Hit Successfully");
-
+//saare alg form me  data hai
 					EmployeePojo emppojo = new EmployeePojo();
+					//abhi emppojo ka obj create kiya and abhi ye empty hai!
 			//emppojo  ko select kiya fir ctrl+shift+i p click then database me kya ja rha hai vah dikhega
 					emppojo.setEmp_id(Integer.parseInt(emp_id));
 					emppojo.setEmpName(empName);
@@ -94,7 +96,7 @@ public class EmployeeSaveDataMethods extends HttpServlet {
 					emppojo.setEmail(email);
 					emppojo.setMobNo(Long.parseLong(mobNo));
 					emppojo.setEmpDept(empDept);
-
+//ab emppojo me data set ho gya 
 					EmployeeDAO empdao = new EmployeeDAO();
 
 					empdao.saveMethods(emppojo);
