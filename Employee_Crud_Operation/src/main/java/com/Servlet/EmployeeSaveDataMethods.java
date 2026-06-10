@@ -84,12 +84,13 @@ public class EmployeeSaveDataMethods extends HttpServlet {
 					String email = req.getParameter("email");
 					String mobNo = req.getParameter("mobNo");
 					String empDept = req.getParameter("empDept");
-//aa gya 
+//Data backend me aa gya! 
 					System.out.println("Servlet Hit Successfully");
 //saare alg form me  data hai
 					EmployeePojo emppojo = new EmployeePojo();
 					//abhi emppojo ka obj create kiya and abhi ye empty hai!
 			//emppojo  ko select kiya fir ctrl+shift+i p click then database me kya ja rha hai vah dikhega
+					//abhi pojo me data bind kar rahe hai
 					emppojo.setEmp_id(Integer.parseInt(emp_id));
 					emppojo.setEmpName(empName);
 					emppojo.setAddress(address);
@@ -97,7 +98,9 @@ public class EmployeeSaveDataMethods extends HttpServlet {
 					emppojo.setMobNo(Long.parseLong(mobNo));
 					emppojo.setEmpDept(empDept);
 //ab emppojo me data set ho gya 
+//DAO obj k jariye ye data pstmt me set karega!
 					EmployeeDAO empdao = new EmployeeDAO();
+//pstmt me data set ho gaya hai!					
 
 					empdao.saveMethods(emppojo);
 
@@ -105,7 +108,7 @@ public class EmployeeSaveDataMethods extends HttpServlet {
 
 			//res.sendRedirect("GetdataList");
 					
-				    res.sendRedirect("GetdataList?message=Data inserted Successfully!" );
+				    res.sendRedirect("GetdsataList?message=Data inserted Successfully!" );
 
 					
 				}	
