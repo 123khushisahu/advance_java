@@ -100,16 +100,20 @@ public class EmployeeSaveDataMethods extends HttpServlet {
 //ab emppojo me data set ho gya 
 //DAO obj k jariye ye data pstmt me set karega!
 					EmployeeDAO empdao = new EmployeeDAO();
-//pstmt me data set ho gaya hai!					
+				
 
 					empdao.saveMethods(emppojo);
+//pstmt me data set ho gaya hai!	
 
 					System.out.println("Data Saved Successfully!");
-
-			//res.sendRedirect("GetdataList");
+//pstmt/database me data set ho gaya hai!	
+			
 					
-				    res.sendRedirect("GetdsataList?message=Data inserted Successfully!" );
-
+				    res.sendRedirect("GetdataList?message=Data inserted Successfully!" );
+//jsp ko res deti hai 				    
+//Ye line browser ko bolti hai:
+//"Main kaam kar chuka hoon. Ab tum ek nayi request GetdsataList par bhejo."
+//Isliye debugger ko lagta hai ki servlet me phir se aa gaya.
 					
 				}	
 		}
